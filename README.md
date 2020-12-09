@@ -3,7 +3,7 @@
 Purpose: This project sends me daily email notifications if there is new news on professional disc golf players signing contracts with sponsors
 
 To Do:
-1. Write thorough instructions on what project does
+1. ~~Write thorough instructions on what project does~~
 2. Learn readme best practices
 3. Write skeleton of readme   
 4. Write the code!
