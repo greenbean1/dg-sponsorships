@@ -9,6 +9,10 @@ To Do:
 4. Write the code!
 5. Final readme revisions
 
+Remember To...
+- Add email info text file to gitignore
+- Create log file keeping track of runs
+
 Modules
 - scrape_functions
 - csv_functions
