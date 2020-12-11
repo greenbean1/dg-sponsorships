@@ -1,5 +1,6 @@
-from bs4 import beautifulsoup4
+from bs4 import BeautifulSoup
 import urllib.request
+# import csv_functions
 
 
 # Takes URL and returns a BeautifulSoup object
@@ -20,17 +21,12 @@ def get_text_from_td_tag(td):
 def soup_to_table_body(soup):
     # Get the only table in the HTML (FRAIL LOGIC)
     table_all = soup.table
-    # Get the part of the table that has rows with relevant information
-    table_body = table_all.contents[3]
-    return table_body
+    # Get the table body (has relevant information)
+    return table_all.contents[3]
 
 
-# The only thing that really matters!!!
-def get_data(url):
-    soup = get_html_soup(url)
-    table_body = soup_to_table_body(soup)
+def table_body_to_dict(table_body):
     size_of_table = len(table_body.contents)
-
     dg_info_dict = {}
     for x in range(1, size_of_table):
         if x % 2 != 0:
@@ -44,5 +40,13 @@ def get_data(url):
                 cell_info = get_text_from_td_tag(str(cells[y]))
                 player_info_list.append(cell_info)
             dg_info_dict[x // 2 + 1] = player_info_list
-    # print(dg_info_dict)
+    print(dg_info_dict)
     return dg_info_dict
+
+
+# The only thing that really matters!!!
+def get_data(url):
+    soup = get_html_soup(url)
+    # csv_functions.log_scraping()
+    table_body = soup_to_table_body(soup)
+    return table_body_to_dict(table_body)

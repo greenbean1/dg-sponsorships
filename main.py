@@ -10,16 +10,16 @@ Process:
 # Modules to write
 import scrape_functions
 import csv_functions
-import email_functions
+# import email_functions
 
 DISC_GOLF_ARTICLE_URL = 'https://discgolf.ultiworld.com/2020/11/02/2021-player-sponsorship-tracker/'
 
 # Scrape disc golf article into dg_dict
 dg_dict = scrape_functions.get_data(DISC_GOLF_ARTICLE_URL)  # have this function log timestamp of scraping
-# # Write dg_dict into CSV (only if CSV does not exist)
-# csv_functions.write_to_csv(dg_dict)
-# # Save incremental article information (incremental relative to the prior existing CSV
-# incremental_info = csv_functions.dict_incremental_info(dg_dict)
+# Write dg_dict into CSV (only if CSV does not exist)
+csv_functions.write_to_csv_if_not_exists(dg_dict)
+# Save incremental article information (incremental relative to the prior existing CSV) & Need to add write to csv portion
+incremental_names = csv_functions.get_incremental_names(dg_dict)
 # # If there is actually any incremental info, email me the info
 # if incremental_info is not empty:
 #     email_functions.send_email() # have this function log timestamp of emailing
