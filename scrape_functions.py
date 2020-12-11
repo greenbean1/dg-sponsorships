@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib.request
-# import csv_functions
+import csv_functions
+
+CSV_SCRAPING_LOG = 'scraping_log.csv'
 
 
 # Takes URL and returns a BeautifulSoup object
@@ -47,6 +49,6 @@ def table_body_to_dict(table_body):
 # The only thing that really matters!!!
 def get_data(url):
     soup = get_html_soup(url)
-    # csv_functions.log_scraping()
+    csv_functions.log_timestamp(CSV_SCRAPING_LOG)
     table_body = soup_to_table_body(soup)
     return table_body_to_dict(table_body)
