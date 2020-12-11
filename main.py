@@ -22,4 +22,4 @@ if not csv_functions.csv_dg_info_exists():
 incremental_names = csv_functions.get_incremental_names(dg_dict)
 # # If there is actually any incremental info, email me the info
 # if len(incremental_names) != 0:
-#     email_functions.send_email(incremental_names)  # have this function log timestamp of emailing
+#     email_functions.send_email(incremental_names, DISC_GOLF_ARTICLE_URL)  # have this function log timestamp of emailing
