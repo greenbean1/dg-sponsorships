@@ -6,12 +6,13 @@ To Do:
 1. ~~Write thorough instructions on what project does~~
 2. Learn readme best practices
 3. Write skeleton of readme   
-4. Write the code!
+4. ~~Write the code!~~
 5. Final readme revisions
 
 Remember To...
-- Add email info text file to gitignore
-- Create log file keeping track of runs
+- ~~Add email info text file to gitignore~~
+- ~~Create log file keeping track of runs~~
+- ~~Change receipient emails once code is done~~
 
 Modules
 - scrape_functions

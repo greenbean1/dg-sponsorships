@@ -4,24 +4,22 @@ import ssl
 from email.mime.text import MIMEText
 import csv_functions
 from random import randrange
+from os import path
 
-EMAIL_PASSWORD_FILE = 'email_info.txt'
-EMAIL_SENDING_LOG = 'emailing_log.csv'
-
-# RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'uninathan@gmail.com', 'jancvanbruggen@gmail.com']
-RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'unibeau@yahoo.com']
+RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'uninathan@gmail.com', 'jancvanbruggen@gmail.com']
 SENDER_EMAIL = 'greenbeandev1@gmail.com'
 PORT = 465  # For SSL
 SMTP_SERVER = 'smtp.gmail.com'
 
 
-def get_password():
-    file = open(EMAIL_PASSWORD_FILE, 'r')
+def get_password(filename, directory):
+    password_file_path = path.join(directory, filename)
+    file = open(password_file_path, 'r')
     return file.read()
 
 
 def get_interesting_word():
-    interesting_words = ['Spicy', 'Riveting', 'Shocking', 'Captivating', 'Sweet', 'Mysterious', 'Dank', 'Hot']
+    interesting_words = ['Spicy', 'Riveting', 'Shocking', 'Captivating', 'Sweet', 'Unbelievable', 'Dank', 'Hot']
     return interesting_words[randrange(len(interesting_words))]
 
 
@@ -38,9 +36,9 @@ def build_full_email_message(names, article_url):
     return msg_string
 
 
-def send_email(names, article_url):
+def send_email(names, article_url, email_password_filename, email_sending_log_filename, directory):
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(SMTP_SERVER, PORT, context=context) as server:
-        server.login(SENDER_EMAIL, get_password())
+        server.login(SENDER_EMAIL, get_password(email_password_filename, directory))
         server.sendmail(SENDER_EMAIL, RECEIVING_EMAILS, build_full_email_message(names, article_url))
-    csv_functions.log_timestamp(EMAIL_SENDING_LOG)
+    csv_functions.log_timestamp(email_sending_log_filename, directory)
