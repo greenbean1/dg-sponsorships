@@ -20,6 +20,5 @@ dg_dict = scrape_functions.get_data(DISC_GOLF_ARTICLE_URL)
 if not csv_functions.csv_dg_info_exists():
     csv_functions.write_to_csv(dg_dict)
 incremental_names = csv_functions.get_incremental_names(dg_dict)
-# if incremental_names:
-# email_functions.send_email(incremental_names, DISC_GOLF_ARTICLE_URL)
-email_functions.test_send_email(incremental_names,DISC_GOLF_ARTICLE_URL)
+if incremental_names:
+    email_functions.send_email(incremental_names, DISC_GOLF_ARTICLE_URL)
