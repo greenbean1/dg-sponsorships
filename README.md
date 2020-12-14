@@ -26,5 +26,6 @@ Thank you, Nathan Hoover and Jan Van Bruggen for your guidance on this project!
 ### Notes
  - A conscious effort was made to match the robustness of the code to the longevity of project relevance 
 ### Resources
- - [Markdown](https://www.markdownguide.org/cheat-sheet/)
  - [Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
+ - [Markdown](https://www.markdownguide.org/cheat-sheet/)
+ - [Readme Guide](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)
