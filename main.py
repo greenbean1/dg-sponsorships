@@ -29,7 +29,6 @@ dg_dict = scrape_functions.get_dict_from_url(DISC_GOLF_ARTICLE_URL, SCRAPING_LOG
 # Write dg_dict into CSV (only if CSV does not exist)
 if not csv_functions.file_exists(PRIMARY_DG_CSV_FILENAME, CURRENT_MODULE_DIRECTORY):
     csv_functions.write_to_primary_dg_csv(dg_dict, PRIMARY_DG_CSV_FILENAME, CURRENT_MODULE_DIRECTORY)
-    print('I no find csv')
 incremental_names = csv_functions.get_incremental_names(dg_dict, PRIMARY_DG_CSV_FILENAME, CURRENT_MODULE_DIRECTORY)
 if incremental_names:
     email_functions.send_email(incremental_names, DISC_GOLF_ARTICLE_URL, EMAIL_PASSWORD_FILENAME, EMAIL_SENDING_LOG, CURRENT_MODULE_DIRECTORY)
