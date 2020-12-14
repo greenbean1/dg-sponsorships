@@ -19,10 +19,12 @@ This project sends email notifications if there is "new" news on professional di
 ## Credits
 Thank you, Nathan Hoover and Jan Van Bruggen for your guidance on this project!
 
-## Misc Resources
- - [Markdown](https://www.markdownguide.org/cheat-sheet/)
- - [Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
-
-## Remaining To Do
+## Misc
+### Remaining To Do
 1. General code review with Nathan
 2. Manage unversioned files
+### Notes
+ - A conscious effort was made to match the robustness of the code to the longevity of project relevance 
+### Resources
+ - [Markdown](https://www.markdownguide.org/cheat-sheet/)
+ - [Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
