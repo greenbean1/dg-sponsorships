@@ -20,6 +20,9 @@ This project sends email notifications if there is "new" news on professional di
 Thank you, Nathan Hoover and Jan Van Bruggen for your guidance on this project!
 
 ## Misc
+### Potential Improvements
+- Include player/sponsor combos in email
+- Add From key to message
 ### Remaining To Do
 1. General code review with Nathan
 2. Manage unversioned files
