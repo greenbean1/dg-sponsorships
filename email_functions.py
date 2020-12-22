@@ -6,7 +6,7 @@ import csv_functions
 from random import randrange
 from os import path
 
-RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'uninathan@gmail.com', 'jancvanbruggen@gmail.com']
+RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'uninathan@gmail.com', 'jancvanbruggen@gmail.com', 'chrisschek@gmail.com']
 SENDER_EMAIL = 'greenbeandev1@gmail.com'
 PORT = 465  # For SSL
 SMTP_SERVER = 'smtp.gmail.com'
