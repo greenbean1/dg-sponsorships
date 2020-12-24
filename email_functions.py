@@ -5,11 +5,13 @@ import smtplib
 import ssl
 from typing import List
 
+from constants import RECEIVING_EMAILS
 import csv_functions
 
 
-RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'uninathan@gmail.com', 'jancvanbruggen@gmail.com', 'chrisschek@gmail.com']
 SENDER_EMAIL = 'greenbeandev1@gmail.com'
+SENDER_NAME = 'GreenBean Bot'
+EMAIL_SUBJECT = 'New Disc Golf Sponsorship Agreement'
 PORT = 465  # For SSL
 SMTP_SERVER = 'smtp.gmail.com'
 
@@ -33,7 +35,8 @@ def build_email_body(names: List[str], article_url: str) -> str:
 
 def build_full_email_message(names: List[str], article_url: str) -> str:
     msg = MIMEText(build_email_body(names, article_url), 'html')
-    msg['Subject'] = 'New Disc Golf Sponsorship Agreement'
+    msg['Subject'] = EMAIL_SUBJECT
+    msg['From'] = SENDER_NAME
     msg_string = msg.as_string()
     return msg_string
 
