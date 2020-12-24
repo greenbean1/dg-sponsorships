@@ -23,9 +23,6 @@ Thank you, Nathan Hoover and Jan Van Bruggen for your guidance on this project!
 ### Potential Improvements
 - Include player/sponsor combos in email
 - Add From key to message
-### Remaining To Do
-1. General code review with Nathan
-2. Manage unversioned files
 ### Notes
  - A conscious effort was made to match the robustness of the code to the longevity of project relevance 
 ### Resources
