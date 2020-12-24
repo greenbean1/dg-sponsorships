@@ -1,7 +1,9 @@
+# Organize via blocks of imports for standard Python, nonstandard Python & local modules
 import os
-import scrape_functions
+
 import csv_functions
 import email_functions
+import scrape_functions
 
 DISC_GOLF_ARTICLE_URL = 'https://discgolf.ultiworld.com/2020/11/02/2021-player-sponsorship-tracker/'
 PRIMARY_DG_CSV_FILENAME = 'disc_golf_info.csv'
@@ -17,4 +19,8 @@ if not csv_functions.file_exists(PRIMARY_DG_CSV_FILENAME, CURRENT_MODULE_DIRECTO
     csv_functions.write_to_primary_dg_csv(dg_dict, PRIMARY_DG_CSV_FILENAME, CURRENT_MODULE_DIRECTORY)
 incremental_names = csv_functions.get_incremental_names(dg_dict, PRIMARY_DG_CSV_FILENAME, CURRENT_MODULE_DIRECTORY)
 if incremental_names:
-    email_functions.send_email(incremental_names, DISC_GOLF_ARTICLE_URL, EMAIL_PASSWORD_FILENAME, EMAIL_SENDING_LOG, CURRENT_MODULE_DIRECTORY)
+    email_functions.send_email(incremental_names,
+                               DISC_GOLF_ARTICLE_URL,
+                               EMAIL_PASSWORD_FILENAME,
+                               EMAIL_SENDING_LOG,
+                               CURRENT_MODULE_DIRECTORY)
