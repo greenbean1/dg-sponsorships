@@ -17,12 +17,12 @@ This project sends email notifications if there is "new" news on professional di
 - Modules containing functions for each of [scraping](https://github.com/greenbean1/dg-sponsorships/blob/main/scrape_functions.py), [csv management](https://github.com/greenbean1/dg-sponsorships/blob/main/csv_functions.py) & [emailing](https://github.com/greenbean1/dg-sponsorships/blob/main/email_functions.py)
 
 ## Credits
-Thank you, Nathan Hoover and Jan Van Bruggen for your guidance on this project!
+Thank you to Nathan Hoover and Jan Van Bruggen for your guidance on this project!
 
 ## Misc
 ### Potential Improvements
 - Include player/sponsor combos in email
-- Add From key to message
+- Add "Things I Learned" section to readme
 ### Notes
  - A conscious effort was made to match the robustness of the code to the longevity of project relevance 
 ### Resources
