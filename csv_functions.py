@@ -1,3 +1,7 @@
+"""
+This module contains constants and functions relevant to CSVs
+"""
+
 import csv
 from datetime import datetime
 from os import path

@@ -1,3 +1,7 @@
+"""
+This module contains constants used throughout this project
+"""
+
 import os
 
 RECEIVING_EMAILS = ['beauhoover1@gmail.com', 'uninathan@gmail.com', 'jancvanbruggen@gmail.com', 'chrisschek@gmail.com']
