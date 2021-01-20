@@ -1,6 +1,9 @@
-# Organize via blocks of imports for standard Python, nonstandard Python & local modules
-import csv_functions
+"""
+This module contains constants used throughout this project
+"""
+
 import constants as c
+import csv_functions
 import email_functions
 import scrape_functions
 
